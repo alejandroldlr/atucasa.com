@@ -1,0 +1,67 @@
+<!-- 
+***********************************************************************
+ Atucasa.com
+ Diplomado aplicaciones móviles
+ Enrique Vargas Flores
+ Alejandro López de La Rosa
+ Julio - 2015
+***********************************************************************
+ -->
+
+<ion-view view-title="Pedido completado">
+<ion-nav-buttons side="right">
+</ion-nav-buttons>
+<ion-content>
+<div class="list card">
+  <a class="item item-thumbnail-left custom-background">
+    <img ng-src="{{restaurant.image}}">
+    <h2>{{restaurant.name}}</h2>
+    <p>{{restaurant.foodtype}}</p>
+    <p>{{restaurant.address}} - {{restaurant.phone}}</p>
+    <p>{{restaurant.schedule}}</p>
+    </a>
+</div>
+<div class="list list-inset">
+      <a class="item item-text-wrap">
+        Pedido: {{orderList[0].order_number}}
+      <br>
+        NIT: {{orderList[0].nit}} - Factura: {{orderList[0].inv_name}}
+      <br>   
+        Fecha: {{orderList[0].date}}
+      <br>
+        Dirección: {{addressData[0].street}} # {{addressData[0].number}}
+      <br>
+        Teléfono ref: {{addressData[0].refPhone}}
+      </a>
+</div>
+<div class="row" >
+<div class="col col-25" id="encabezadoCentro">Producto/Precio</div>
+<div class="col col-60" id="encabezadoCentro"></div>
+<div class="col col-15" id="encabezadoDerecha">Total Bs</div>
+</div>
+<ion-list>
+  <ion-item class="item-avatar" type="item-text-wrap" collection-repeat="order in orderList">
+   <img ng-src="{{order.image}}">
+   <div class="row row-item">
+      <div class="col" align="left">
+        <h2>{{(order.quantity)}} {{order.service}}</h2>
+        <p>Bs. {{(order.price*1).toFixed(2)}}</p>
+      </div>
+      <div class="col" align="right">
+        <p><br>{{(order.price*order.quantity).toFixed(2)}}</p>
+      </div>
+   </div>
+  </ion-item>
+</ion-list>
+
+</ion-content>
+<ion-footer-bar  class="bar-assertive">
+<div class="buttons">
+  <button class="button">Cantidad: {{cantidad}}</button>
+</div>
+<h1 class="title">Total</h1>
+<div class="buttons">
+  <button class="button pull-right">Bs. {{total.toFixed(2)}}</button>
+</div>
+</ion-footer-bar>
+</ion-view>

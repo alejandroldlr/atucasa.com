@@ -1,0 +1,64 @@
+<!-- 
+***********************************************************************
+ Atucasa.com
+ Diplomado aplicaciones móviles
+ Enrique Vargas Flores
+ Alejandro López de La Rosa
+ Julio - 2015
+***********************************************************************
+ -->
+
+<ion-view view-title="Confirmar pedido">
+<ion-nav-buttons side="right">
+<button class="button ion-checkmark-circled" ng-click="commit()"> Confirmar
+</button>
+</ion-nav-buttons>
+<ion-content>
+<div class="list card">
+  <a class="item item-thumbnail-left custom-background">
+    <img ng-src="{{restaurant.image}}">
+    <h2>{{restaurant.name}}</h2>
+    <p>{{restaurant.foodtype}}</p>
+    <p>{{restaurant.address}} - {{restaurant.phone}}</p>
+    <p>{{restaurant.schedule}}</p>
+    </a>
+</div>
+<div class="list list-inset">
+      <label class="item item-input">
+        <input type="number" placeholder="NIT" ng-model="invoiceData.nit">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Nombre factura" ng-model="invoiceData.invoiceName">
+      </label>
+</div>
+<div class="row" >
+<div class="col col-25" id="encabezadoCentro">Producto/Precio</div>
+<div class="col col-60" id="encabezadoCentro"></div>
+<div class="col col-15" id="encabezadoDerecha">Total Bs</div>
+</div>
+<ion-list>
+  <ion-item class="item-avatar" type="item-text-wrap" collection-repeat="order in orderList">
+   <img ng-src="{{order.image}}">
+   <div class="row row-item">
+      <div class="col" align="left">
+        <h2>{{(order.quantity)}} {{order.service}}</h2>
+        <p>Bs. {{(order.price*1).toFixed(2)}}</p>
+      </div>
+      <div class="col" align="right">
+        <p><br>{{(order.price*order.quantity).toFixed(2)}}</p>
+      </div>
+   </div>
+  </ion-item>
+</ion-list>
+
+</ion-content>
+<ion-footer-bar  class="bar-assertive">
+<div class="buttons" ng-click="commit()">
+  <button class="button">Cantidad: {{cantidad}}</button>
+</div>
+<h1 class="title">Total</h1>
+<div class="buttons" ng-click="commit()">
+  <button class="button pull-right">Bs. {{total.toFixed(2)}}</button>
+</div>
+</ion-footer-bar>
+</ion-view>

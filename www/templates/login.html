@@ -1,0 +1,46 @@
+<!-- 
+***********************************************************************
+ Atucasa.com
+ Diplomado aplicaciones móviles
+ Enrique Vargas Flores
+ Alejandro López de La Rosa
+ Julio - 2015
+***********************************************************************
+ -->
+
+<ion-modal-view>
+  <ion-header-bar class="bar-assertive">
+    <h1 class="title">Ingresar</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Cerrar</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+
+<div class="list card">
+  <a class="item item-thumbnail-left custom-background">
+    <img ng-src="http://lopezdelarosa.com/atucasa/atucasa_logo.png">
+    <h2>Atucasa.com</h2>
+    <p>Comida rápida a tu domicilio</p>
+    <p>Telefonos: 591-4-4253565</p>
+    <p>Cochabamba - Bolivia</p>
+  </a>
+</div>
+
+    <form ng-submit="doLogin()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Usuario</span>
+          <input type="text" ng-model="loginData.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Contraseña</span>
+          <input type="password" ng-model="loginData.password">
+        </label>
+        <label class="item">
+          <button class="button button-block button-assertive" type="submit">Ingresar</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

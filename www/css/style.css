@@ -1,0 +1,30 @@
+.scroll {
+    height: 100%;
+}
+.map{
+    width: 90%;
+    height: 70%;
+    margin: 0 auto 0 auto;
+}
+
+#encabezadoDerecha {
+    text-align: right;
+    color: white;
+    background-color: #ef473a;
+    font-weight: bold;
+    font-size:100%;
+}
+#encabezadoCentro {
+    text-align: center;
+    color: white;
+    background-color: #ef473a;
+    font-weight: bold;
+    font-size:100%;
+}
+.custom-background {
+    background-image: url('../img/fondo.png')
+}
+
+.custom-text {
+       color: white;
+}

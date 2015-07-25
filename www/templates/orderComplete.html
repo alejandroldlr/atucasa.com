@@ -1,0 +1,41 @@
+<!-- 
+***********************************************************************
+ Atucasa.com
+ Diplomado aplicaciones móviles
+ Enrique Vargas Flores
+ Alejandro López de La Rosa
+ Julio - 2015
+***********************************************************************
+ -->
+
+<ion-view view-title="Pedido realizado" hide-back-button="true">
+<ion-nav-buttons side="right">
+</ion-nav-buttons>
+
+<ion-content>
+<div class="list card">
+  <a class="item item-thumbnail-left custom-background">
+    <img ng-src="http://lopezdelarosa.com/atucasa/atucasa_logo.png">
+    <h2>Atucasa.com</h2>
+    <p>Comida rápida a tu domicilio</p>
+    <p>Telefonos: 591-4-4253565</p>
+    <p>Cochabamba - Bolivia</p>
+  </a>
+</div>
+<div class="card">
+  <a class="item item-text-wrap">
+    <h2>Tu pedido está en camino...</h2>
+    <br>
+    <p>El número de ticket de tu pedido es:  </p>
+    <br>
+    <h2>{{orderNumber}}</h2>
+    <br>
+    <p>Cualquier consulta comunicate a nuestros teléfonos</p>
+    <br>
+    <h2>Gracias por tu preferencia</h2>
+    <br>
+  </a>
+  <button class="button button-block button-assertive" ng-click="quit()">Volver al inicio</button>
+</div>
+</ion-content>
+</ion-view>

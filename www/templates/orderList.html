@@ -1,0 +1,34 @@
+<!-- 
+***********************************************************************
+ Atucasa.com
+ Diplomado aplicaciones móviles
+ Enrique Vargas Flores
+ Alejandro López de La Rosa
+ Julio - 2015
+***********************************************************************
+ -->
+
+<ion-view view-title="Pedidos realizados">
+  <ion-content>
+	<div class="list card">
+		<a class="item item-thumbnail-left custom-background">
+			<img ng-src="http://lopezdelarosa.com/atucasa/atucasa_logo.png">
+			<h2>Atucasa.com</h2>
+			<p>Comida rápida a tu domicilio</p>
+			<p>Telefonos: 591-4-4253565</p>
+			<p>Cochabamba - Bolivia</p>
+		</a>
+	</div>
+   <ion-list can-swipe="listCanSwipe">    
+    	<ion-item class="item-remove-animate item-thumbnail-left item-icon-right" ng-repeat="output in orderList" type="item-text-wrap" href="#/app/orderDetail/{{output.order_number}}">
+         <img ng-src="{{output.rest_img}}" >
+         <h2>{{output.date}}</h2>
+         <h2>{{output.rest_name}}</h2>
+         <p>Pedido:</p>
+         <p>{{output.order_number}}</p>
+         <i class="icon ion-chevron-right icon-accessory"></i>
+         <ion-option-button class="button-assertive" ng-click="delete(output,$index)">Eliminar</ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

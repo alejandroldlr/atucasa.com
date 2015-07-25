@@ -1,0 +1,27 @@
+<!-- 
+***********************************************************************
+ Atucasa.com
+ Diplomado aplicaciones móviles
+ Enrique Vargas Flores
+ Alejandro López de La Rosa
+ Julio - 2015
+***********************************************************************
+ -->
+
+<ion-view view-title="Buscar mi ubicación">   
+<ion-content>
+<div class="list card">
+	<a class="item item-thumbnail-left custom-background">
+		<img ng-src="http://lopezdelarosa.com/atucasa/atucasa_logo.png">
+		<h2>Atucasa.com</h2>
+		<p>Comida rápida a tu domicilio</p>
+		<p>Telefonos: 591-4-4253565</p>
+		<p>Cochabamba - Bolivia</p>
+	</a>
+</div>
+<div id="map" class="map" data-tap-disabled="true"></div>
+</ion-content>
+<ion-footer-bar class="bar-assertive">
+<a ng-click="confirmMapAddress()" class="button button-icon icon ion-navigate">Confirmar</a>
+</ion-footer-bar>
+</ion-view>

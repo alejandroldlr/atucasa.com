@@ -1,0 +1,53 @@
+<!-- 
+***********************************************************************
+ Atucasa.com
+ Diplomado aplicaciones móviles
+ Enrique Vargas Flores
+ Alejandro López de La Rosa
+ Julio - 2015
+***********************************************************************
+ -->
+
+<ion-view view-title="Registra tu dirección">
+<ion-content>
+<div class="list card">
+  <a class="item item-thumbnail-left custom-background">
+  <img ng-src="http://lopezdelarosa.com/atucasa/atucasa_logo.png">
+  <h2>Atucasa.com</h2>
+  <p>Comida rápida a tu domicilio</p>
+  <p>Telefonos: 591-4-4253526</p>
+  <p>Cochabamba - Bolivia</p>
+  </a>
+</div>
+
+  <ion-list>
+   <form ng-submit="saveAddress()">
+     <label class="item item-input">
+          <input type="text" placeholder="Calle / Avenida" ng-model="addressForm.street">
+     </label>
+     <label class="item item-input">
+          <input type="number" placeholder="# domicilio" ng-model="addressForm.number">
+     </label>
+     <label class="item item-input">
+          <span class="input-label">Entre</span>	
+          <input type="text" placeholder="Calle referencia 1" ng-model="addressForm.refStreet1">
+     </label>
+     <label class="item item-input">
+          <span class="input-label">y</span>  
+          <input type="text" placeholder="Calle referencia 2" ng-model="addressForm.refStreet2">
+     </label>
+     <label class="item item-input">
+          <input type="text" placeholder="Edificio, piso, departamento/oficina" ng-model="addressForm.building">
+     </label>
+     <label class="item item-input">
+          <input type="tel" placeholder="Teléfono referencia" ng-model="addressForm.refPhone">
+     </label>
+     <label class="row">
+      <button class="button button-block  button-assertive"  type="submit">
+        Guardar
+      </button>
+     </label>
+   </form>
+  </ion-list>
+ </ion-content>
+</ion-view>

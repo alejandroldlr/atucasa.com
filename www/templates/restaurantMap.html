@@ -1,0 +1,25 @@
+<!-- 
+***********************************************************************
+ Atucasa.com
+ Diplomado aplicaciones móviles
+ Enrique Vargas Flores
+ Alejandro López de La Rosa
+ Julio - 2015
+***********************************************************************
+ -->
+
+<ion-view view-title="Ubicación restaurante">
+	<ion-content>
+		<div class="list card">
+			<a class="item item-thumbnail-left custom-background">
+				<img ng-src="{{restaurant.image}}">
+				<h2>{{restaurant.name}}</h2>
+                <p>{{restaurant.foodtype}}</p>
+                <p>{{restaurant.address}} - {{restaurant.phone}}</p>
+                <p>{{restaurant.schedule}}</p>
+		    </a>
+		</div>
+		<div id="rest_map" class="map" data-tap-disabled="true"></div> 
+	</ion-content>
+</ion-view>
+

@@ -1,0 +1,54 @@
+<!-- 
+***********************************************************************
+ Atucasa.com
+ Diplomado aplicaciones móviles
+ Enrique Vargas Flores
+ Alejandro López de La Rosa
+ Julio - 2015
+***********************************************************************
+ -->
+
+<ion-view view-title="Productos">
+<ion-nav-buttons side="right">
+  <button class="button ion-ios-location" ng-click="goToRestMap()"> 
+  </button>
+  <button class="button ion-android-cart" ng-click="commit()"> Mi Carrito
+  </button>
+</ion-nav-buttons>
+<ion-content>
+  <div class="list card item-thumbnail-left" >
+    <a 
+    href="#/app/restaurantMap/{{restaurant.id}}"
+    class="item item-thumbnail-left custom-background">
+    <img ng-src="{{restaurant.image}}">
+    <h2>{{restaurant.name}}</h2>
+    <p>{{restaurant.foodtype}}</p>
+    <p>{{restaurant.address}} - {{restaurant.phone}}</p>
+    <p>{{restaurant.schedule}}</p>
+    </a>
+  </div>
+
+<ion-list>
+  <ion-item class="item-thumbnail-left item-icon-right" collection-repeat="menu in restaurant.menu" type="item-text-wrap">
+    <img ng-src="{{menu.image}}" ng-click="add(menu)">
+    <h2>{{menu.service}}</h2>
+    <p>{{menu.description}}</p>
+    <p>Bs. {{menu.price}}</p>
+    <ion-option-button class="button-balanced" ng-click="add(menu)">Adicionar</ion-option-button>
+    <ion-option-button class="button-assertive" ng-click="delete(menu)">Eliminar</ion-option-button>
+    <i class="badge badge-assertive" ng-click="add(menu)">{{menu.quantity}}</i>
+    <i class="icon ion-chevron-left icon-accessory"></i>
+  </ion-item>
+</ion-list>
+</ion-content>
+<ion-footer-bar align-title="left" class="bar-assertive">
+  <div class="buttons" ng-click="commit()">
+    <button class="button" >Cantidad: {{cantidad}}</button>
+  </div>
+  <h1 class="title">Total</h1>
+  <div class="buttons" ng-click="commit()">
+    <button class="button">Bs. {{total.toFixed(2)}}</button>
+  </div>
+</ion-footer-bar>
+</ion-view>
+

@@ -1,0 +1,33 @@
+<!-- 
+***********************************************************************
+ Atucasa.com
+ Diplomado aplicaciones móviles
+ Enrique Vargas Flores
+ Alejandro López de La Rosa
+ Julio - 2015
+***********************************************************************
+ -->
+
+<ion-view view-title="Restaurantes">
+  <ion-content>
+    <div class="list">
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" ng-model="searchQuery" placeholder="Buscar restaurante">
+        </label>
+        <button class="button button-small">
+          Buscar
+        </button>
+      </div>
+    </div>
+    <ion-list>
+      <ion-item class="item-thumbnail-left item-icon-right" collection-repeat="restaurant in restaurants | filter:searchQuery" type="item-text-wrap" href="#/app/restaurantMenu/{{restaurant.id}}/{{addressId}}">
+      <img ng-src="{{restaurant.image}}" >
+      <h2>{{restaurant.name}}</h2>
+      <p>{{restaurant.foodtype}}</p>
+      <p>{{restaurant.schedule}}</p>
+      <i class="icon ion-chevron-right icon-accessory"></i>
+    </ion-list>
+  </ion-content>
+</ion-view>
+
