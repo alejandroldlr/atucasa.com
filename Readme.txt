@@ -59,7 +59,8 @@ video aplicacion: https://youtu.be/sZ29FyWvqH8
 4.6 Copiar codigo atucasa.com
 
  4.6.1 Copiar la carpeta ./atucasa del DVD al equipo donde ejecutará la aplicación.
- 4.6.2 Clonar en git clone https://github.com/alejandroldlr/atucasa.com atucasa
+ 4.6.2 Clonar con git:
+       $ git clone https://github.com/alejandroldlr/atucasa.com atucasa
 
 4.7 Ingresar a la carpeta /atucasa copiada en la computadora o clonada con git.
 
